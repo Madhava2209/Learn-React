@@ -5,6 +5,8 @@ import Form from './Components/Form';
 import FRInputParent from './Components/FRInputParent';
 import Greet from './Components/Greet';
 import Hero from './Components/Hero';
+import ClickCounter from './Components/HigherOrderComponents/ClickCounter';
+import HoverCounter from './Components/HigherOrderComponents/HoverCounter';
 import { Message } from './Components/Message';
 import MountingLifeCycleA from './Components/MountingLifeCycleA';
 import ParentComponent from './Components/ParentComponent';
@@ -27,12 +29,14 @@ function App() {
       {/* <RefsDemo /> */}
       {/* <FRInputParent /> */}
       {/* <PortalDemo /> */}
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <Hero heroName={'asdasd'} />
       </ErrorBoundary>
       <ErrorBoundary>
         <Hero heroName={''} />
-      </ErrorBoundary>
+      </ErrorBoundary> */}
+      <ClickCounter />
+      <HoverCounter />
     </div>
   );
 }
