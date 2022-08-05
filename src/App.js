@@ -12,6 +12,9 @@ import MountingLifeCycleA from './Components/MountingLifeCycleA';
 import ParentComponent from './Components/ParentComponent';
 import PortalDemo from './Components/PortalDemo';
 import RefsDemo from './Components/RefsDemo';
+import RenderPropsClickCounter from './Components/RenderProps/RenderPropsClickCounter';
+import RenderPropsHoverCounter from './Components/RenderProps/RenderPropsHoverCounter';
+import RenderWithCounter from './Components/RenderProps/RenderWithCounter';
 import Welcome from './Components/Welcome';
 
 function App() {
@@ -37,6 +40,16 @@ function App() {
       </ErrorBoundary> */}
       <ClickCounter />
       <HoverCounter />
+      <RenderWithCounter>
+        {(count, incrementCount) =>(
+          <RenderPropsClickCounter count={count} incrementCount={incrementCount} />
+        )}
+      </RenderWithCounter>
+      <RenderWithCounter>
+        {(count, incrementCount) =>(
+          <RenderPropsHoverCounter count={count} incrementCount={incrementCount} />
+        )}
+      </RenderWithCounter>
     </div>
   );
 }
