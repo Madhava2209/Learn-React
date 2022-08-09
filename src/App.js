@@ -7,6 +7,7 @@ import Greet from './Components/Greet';
 import Hero from './Components/Hero';
 import ClickCounter from './Components/HigherOrderComponents/ClickCounter';
 import HoverCounter from './Components/HigherOrderComponents/HoverCounter';
+import HookCounter from './Components/Hook-useState/HookCounter';
 import { Message } from './Components/Message';
 import MountingLifeCycleA from './Components/MountingLifeCycleA';
 import ParentComponent from './Components/ParentComponent';
@@ -38,7 +39,7 @@ function App() {
       <ErrorBoundary>
         <Hero heroName={''} />
       </ErrorBoundary> */}
-      <ClickCounter />
+      {/* <ClickCounter />
       <HoverCounter />
       <RenderWithCounter>
         {(count, incrementCount) =>(
@@ -49,7 +50,8 @@ function App() {
         {(count, incrementCount) =>(
           <RenderPropsHoverCounter count={count} incrementCount={incrementCount} />
         )}
-      </RenderWithCounter>
+      </RenderWithCounter> */}
+      <HookCounter />
     </div>
   );
 }
