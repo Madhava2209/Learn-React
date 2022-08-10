@@ -7,6 +7,8 @@ import Greet from './Components/Greet';
 import Hero from './Components/Hero';
 import ClickCounter from './Components/HigherOrderComponents/ClickCounter';
 import HoverCounter from './Components/HigherOrderComponents/HoverCounter';
+import CounterContainer from './Components/Hook-useEffect/CounterContainer';
+import CounterUseEffect from './Components/Hook-useEffect/CounterUseEffect';
 import HookCounter from './Components/Hook-useState/HookCounter';
 import { Message } from './Components/Message';
 import MountingLifeCycleA from './Components/MountingLifeCycleA';
@@ -51,7 +53,9 @@ function App() {
           <RenderPropsHoverCounter count={count} incrementCount={incrementCount} />
         )}
       </RenderWithCounter> */}
-      <HookCounter />
+      {/* <HookCounter /> */}
+      {/* <CounterUseEffect /> */}
+      <CounterContainer />
     </div>
   );
 }
