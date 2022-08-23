@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import Counter from './Components/Counter';
 import ErrorBoundary from './Components/ErrorBoundary';
 import Form from './Components/Form';
@@ -19,7 +20,10 @@ import RenderPropsClickCounter from './Components/RenderProps/RenderPropsClickCo
 import RenderPropsHoverCounter from './Components/RenderProps/RenderPropsHoverCounter';
 import RenderWithCounter from './Components/RenderProps/RenderWithCounter';
 import Welcome from './Components/Welcome';
+import ComponentA from './Components/Hook-useContext/ComponentA';
 
+export const userContext = React.createContext() //useContext-Hook
+export const channelContext = React.createContext()
 function App() {
   return (
     <div className="App">
@@ -55,7 +59,13 @@ function App() {
       </RenderWithCounter> */}
       {/* <HookCounter /> */}
       {/* <CounterUseEffect /> */}
-      <CounterContainer />
+      {/* <CounterContainer /> */}
+      {/* useContext-hook */}
+      <userContext.Provider value={'User'}>
+        <channelContext.Provider value={'Channel'}>
+          <ComponentA />
+        </channelContext.Provider>
+      </userContext.Provider>
     </div>
   );
 }
