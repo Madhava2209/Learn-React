@@ -21,6 +21,7 @@ import RenderPropsHoverCounter from './Components/RenderProps/RenderPropsHoverCo
 import RenderWithCounter from './Components/RenderProps/RenderWithCounter';
 import Welcome from './Components/Welcome';
 import ComponentA from './Components/Hook-useContext/ComponentA';
+import CounterWithReducer from './Components/Hook-useReducer/CounterWithReducer';
 
 export const userContext = React.createContext() //useContext-Hook
 export const channelContext = React.createContext()
@@ -61,11 +62,12 @@ function App() {
       {/* <CounterUseEffect /> */}
       {/* <CounterContainer /> */}
       {/* useContext-hook */}
-      <userContext.Provider value={'User'}>
+      {/* <userContext.Provider value={'User'}>
         <channelContext.Provider value={'Channel'}>
           <ComponentA />
         </channelContext.Provider>
-      </userContext.Provider>
+      </userContext.Provider> */}
+      <CounterWithReducer />
     </div>
   );
 }
