@@ -22,6 +22,7 @@ import RenderWithCounter from './Components/RenderProps/RenderWithCounter';
 import Welcome from './Components/Welcome';
 import ComponentA from './Components/Hook-useContext/ComponentA';
 import CounterWithReducer from './Components/Hook-useReducer/CounterWithReducer';
+import ReducerContextParentComponent from './Components/Hook-UseReducerWithUseContext/ReducerContextParentComponent';
 
 export const userContext = React.createContext() //useContext-Hook
 export const channelContext = React.createContext()
@@ -67,7 +68,8 @@ function App() {
           <ComponentA />
         </channelContext.Provider>
       </userContext.Provider> */}
-      <CounterWithReducer />
+      {/* <CounterWithReducer /> */}
+      <ReducerContextParentComponent />
     </div>
   );
 }
